@@ -21,11 +21,7 @@ find_package(tf2_ros REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(ouster_msgs REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common)
-if(NOT TARGET JsonCpp::JsonCpp)
-  find_package(jsoncpp REQUIRED)
-elseif(NOT TARGET jsoncpp_lib)
-  add_library(jsoncpp_lib ALIAS JsonCpp::JsonCpp)
-endif()
+find_package(jsoncpp REQUIRED)
 
 include_directories(
   include
